@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../css/LoginPage/style.css">
 
 </head>
-<!--  -->
+
 <body>
     <section class="ftco-section">
         <div class="container">
@@ -25,7 +25,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-7 col-lg-5">
                     <div class="wrap">
-                        <div class="img" style="background-image: url(../../image/shop_img.jpg);"></div>
+                        <div class="img" style="background-image: url(../../img/shop_img.jpg);"></div>
                         <div class="login-wrap p-4 p-md-5">
                             <div class="d-flex">
                                 <div class="w-100">
@@ -35,7 +35,7 @@
                                   
                                 </div>
                             </div>
-                            <form action="#" class="signin-form">
+                            <form action="../../index.php" class="signin-form">
                                 <div class="form-group mt-3">
                                     <input type="text" class="form-control" required>
                                     <label class="form-control-placeholder" for="username">E-mail</label>

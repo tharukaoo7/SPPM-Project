@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>Sithara Textile- Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,6 +19,13 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+	
+	
+	<link href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/datedropper.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/datedropper.js"></script>
+	
+	
+	
 
 </head>
 
@@ -33,9 +40,9 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                    <i class="fas fa-id-badge" aria-hidden="true"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SPPM<sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">Sithara Textiles</div>
             </a>
 
             <!-- Divider -->
@@ -44,24 +51,40 @@
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
                 <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i class="fas fa-solid fa-chart-line"></i>
                     <span>Dashboard</span></a>
             </li>
 
             <!-- Divider -->
-            <hr class="sidebar-divider">
+            <!-- <hr class="sidebar-divider"> -->
 
             <!-- Heading -->
-            <div class="sidebar-heading">
+            <!-- <div class="sidebar-heading">
                 Interface
-            </div>
+            </div> -->
 
            
             <li class="nav-item">
+                <a class="nav-link" href="attendance.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Attendance</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="content/FaceRecognizer/facerecognizer.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Clock In</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="content/login/Login.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Log Out</span></a>
+            </li>
+             
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li>
+                    <span>Attendance</span></a>
+            </li> -->
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -241,9 +264,9 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Welcome! Admin</span>
+                                <!-- <img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg"> -->
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -278,18 +301,168 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
+						
+                        <h1 class="h3 mb-0 text-dark">Dashboard</h1>
+						
                     </div>
+					
+					
+					 <div class="row justify-content-center">
+					 
+					 				 
+						<div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+									<div class="col-auto">
+                                            <i class="fas fa-solid fa-user-check"></i>
+                                        </div>
+                                        <div class="col mr-2">
+                                            <div class="text-m font-weight-bold text-success text-uppercase mb-1" align="center">
+                                                Active Employees(Today)</div>
+                                            <div class="h4 mb-0 font-weight-bold text-gray-800" align="center">10</div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                  
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-auto">
+                                          <i class='fa fa-users'></i>
+                                        </div>
+										<div class="col mr-2">
+                                            <div class="text-m font-weight-bold text-primary text-uppercase mb-1" align="center">
+                                                Total Employees</div>
+                                            <div class="h4 mb-0 font-weight-bold text-gray-800" align="center">15</div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						
+						
+						</div>
 
-                    <!-- Content Row -->
+					
+					
+					<div class="row">
+
+                        <div class="col-xl-4 col-lg-7 mb-4">
+							<!-- Active Employees -->
+							<div class="card shadow mb-4">
+										<!-- Card Header - Dropdown -->
+										<div class="card-header py-3">
+											<h4 class="m-0 font-weight-bold text-primary" align="center">Active Employees</h4>
+										</div>
+										<!-- Card Body -->
+										<div class="card-body">
+											<div class="chart-pie ">
+												<canvas id="myPieChart"></canvas>
+												
+											</div>
+											<hr>
+											<h1 align="center">66%</h1>
+											
+										</div>
+									</div>
+					</div>
+							
+							
+						 <div class="col-xl-8 col-lg-7">
+							<!--Daily records-->
+							<div class="card shadow mb-4 ">
+										<div class="card-header py-3">
+											<h4 class="m-0 font-weight-bold text-primary" align="center">Monthly Progress</h4>
+										</div>
+										<div class="card-body">
+											<div class="chart-area">
+												<canvas id="myAreaChart"></canvas>
+											</div>
+											<hr>
+											
+										</div>
+							</div>
+						</div>
+					</div>
+					
+					 <div class="row">
+                                <div class="col-lg-12 mb-4">
+                                    <div class="card bg-primary text-white shadow">
+                                        <div class="card-body">
+                                            <h5 align="center">Monthly Report - All Employees</h5>
+											<hr>
+                                            <div class="container mt-100">
+												
+													<div class="row">
+														<div class="col-md-4"> <label>From</label> <input type="text" class="form-control"> </div>
+														<div class="col-md-4"> <label>To</label> <input type="text" class="form-control"> </div>
+														<div class="col-md-4"> <label>Search</label> <button class="btn btn-success pro-button w-100">Generate Report<i class="fas fa-download fa-sm text-white-50"></i></button> </div>
+													</div>
+												
+											</div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+						
+						 <div class="row">
+                                <div class="col-lg-12 mb-4">
+                                    <div class="card bg-primary text-white shadow">
+                                        <div class="card-body">
+                                            <h5 align="center">Monthly Report - Individual Employee</h5>
+											<hr>
+                                            <div class="container mt-200">
+												
+													<div class="row">
+														<div class="col-md-4"> <label>From</label> <input type="text" class="form-control"> </div>
+														<div class="col-md-4"> <label>To</label> <input type="text" class="form-control"> </div>
+														<div class="col-md-2"> <label></label> 
+															<div class="dropdown mt-2">
+																<button class="btn btn-primary dropdown-toggle" type="button"
+																	id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+																	aria-expanded="false">
+																	Select Employee
+																</button>
+																<div class="dropdown-menu animated--fade-in"
+																	aria-labelledby="dropdownMenuButton">
+																	<a class="dropdown-item" href="#">Action</a>
+																	<a class="dropdown-item" href="#">Another action</a>
+																	<a class="dropdown-item" href="#">Something else here</a>
+																</div>
+															</div>
+															
+														</div>
+														<div class="col-md-2 mt-2">
+														<label></label>
+															<button class="btn btn-success pro-button w-100">Generate Report<i class="fas fa-download fa-sm text-white-50"></i></button> 
+														</div>
+												</div>
+												
+											</div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+					
+					
+			
+                           
+					
+																			
+					
+					<!-- Content Row -->
                     
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2022</span>
+                        <span>Copyright &copy; Sithara Textiles</span>
                     </div>
                 </div>
             </footer>
@@ -299,6 +472,14 @@
         <!-- End of Content Wrapper -->
 
     </div>
+	
+	<script>
+	$(document).ready(function(){
+		$('input').dateDropper({
+					});
+	});
+		
+	</script>
     
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -316,7 +497,18 @@
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
-
+	
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+	
+	
+	
+	
+	
+</script>
+	
 </body>
 
 </html>
